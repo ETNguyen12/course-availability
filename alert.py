@@ -54,7 +54,7 @@ def check_seat_availability():
                         message += f"{course_name}: {remaining_seats} seat(s) remaining\n"
                         
                         # If any course has >0 seats, mark alert as needed
-                        if remaining_seats > 0:
+                        if remaining_seats >= 0:
                             alert_needed = True
                     else:
                         message += f"{course_name}: Seat data not found\n"
@@ -74,4 +74,4 @@ def check_seat_availability():
 
 while True:
     check_seat_availability()
-    time.sleep(10)  # Check every 10 seconds (adjust as needed)
+    time.sleep(25) 
