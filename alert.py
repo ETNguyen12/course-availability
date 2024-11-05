@@ -54,7 +54,7 @@ def check_seat_availability():
                         message += f"{course_name}: {remaining_seats} seat(s) remaining\n"
                         
                         # If any course has >0 seats, mark alert as needed
-                        if remaining_seats >= 0:
+                        if remaining_seats > 0:
                             alert_needed = True
                     else:
                         message += f"{course_name}: Seat data not found\n"
@@ -66,7 +66,7 @@ def check_seat_availability():
             message += f"{course_name}: Failed to retrieve data (status code {response.status_code})\n"
 
     # Print the message regardless of seat availability
-    # print(message)
+    print(message)
 
     # Send notification only if there's at least one course with open seats
     if alert_needed:
