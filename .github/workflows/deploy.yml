@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'   # Adjust to your preferred Node.js version
+          python-version: '3.12'  
 
       # Set Git user information explicitly for GitHub Actions
       - name: Configure Git user
