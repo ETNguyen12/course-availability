@@ -1,10 +1,11 @@
+import os
 import requests
 import time
 from bs4 import BeautifulSoup
 
-# Pushover setup
-pushover_user_key = "unss4wsbqep1kk21ncgg2vzu6xfzo8"
-pushover_api_token = "ahfs4dnm35h218c51j658s4iqhc2zy"
+# Load Pushover keys from environment variables
+pushover_user_key = os.getenv("PUSHOVER_USER_KEY")
+pushover_api_token = os.getenv("PUSHOVER_API_TOKEN")
 
 # Target courses with CRNs and course names
 target_courses = [
@@ -74,4 +75,4 @@ def check_seat_availability():
 
 while True:
     check_seat_availability()
-    time.sleep(10) 
+    time.sleep(10)
