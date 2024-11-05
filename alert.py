@@ -74,4 +74,4 @@ def check_seat_availability():
 
 while True:
     check_seat_availability()
-    time.sleep(25) 
+    time.sleep(10) 
